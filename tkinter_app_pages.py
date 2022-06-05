@@ -33,7 +33,7 @@ class MainAppBody(Tk):  # App's body
         frame = self.frames[cont]
         frame.tkraise()
 
-    # Gets methods of the given page (don't know about variables defined under class, or under methods with "self." in front of them, ex.: self.variable_name)
+    # Gets methods of the given page and its variables with "self." in front of them, ex.: self.variable_name)
     def get_page(self, page_class):
         return self.frames[page_class]
 
