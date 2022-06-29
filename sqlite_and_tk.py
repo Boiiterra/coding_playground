@@ -1,12 +1,12 @@
 # Playing around with sqlite and tkinter
 
-from tkinter import *
-import sqlite3
+from tkinter import Tk, Toplevel, Label, Button, Entry
+from sqlite3 import connect
 
 
 def submit():
 
-    conn = sqlite3.connect("test.db")
+    conn = connect("test.db")
 
     c = conn.cursor()
 
@@ -30,7 +30,7 @@ def submit():
 
 def delete():
 
-    conn = sqlite3.connect("test.db")
+    conn = connect("test.db")
 
     c = conn.cursor()
 
@@ -53,7 +53,7 @@ def edit(id):
 
     def submit_e():
 
-        conn = sqlite3.connect("test.db")
+        conn = connect("test.db")
 
         c = conn.cursor()
 
@@ -84,7 +84,7 @@ def edit(id):
     _font = ("Arial", 35)
     _f = ("Arial", 25)
 
-    conn = sqlite3.connect("test.db")
+    conn = connect("test.db")
 
     c = conn.cursor()
 
@@ -131,7 +131,7 @@ def edit(id):
 
 def show():
 
-    conn = sqlite3.connect("test.db")
+    conn = connect("test.db")
 
     c = conn.cursor()
 
@@ -153,7 +153,7 @@ app = Tk()
 app.title("Test")
 app.geometry(f"1000x800+{((app.winfo_screenwidth() - 1000) // 2)}+{((app.winfo_screenheight() - 800) // 2)}")
 
-# conn = sqlite3.connect("test.db")
+# conn = connect("test.db")
 
 # c = cursor = conn.cursor()
 
