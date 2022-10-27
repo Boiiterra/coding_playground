@@ -1,4 +1,4 @@
-package vars
+package funcs
 
 fun main() {
     println("sum of 2 and 4 is ${sum(2, 4)}");
