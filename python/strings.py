@@ -1,0 +1,1 @@
+print(" ".join([f"{element[1:]}{element[0]} <- What is that?" for element in input("Enter anything: ").upper().split()]))
