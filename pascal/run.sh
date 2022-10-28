@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! -d "./pascal/out/" ]; then
+    echo "./pascal/out/ is created for storing output files.\n"
+    mkdir ./pascal/out
+fi
+
 file=$1
 output=${file%.pas*}
 
