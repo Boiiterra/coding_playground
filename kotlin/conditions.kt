@@ -5,6 +5,10 @@ fun main() {
     println(minOf(5, 2))
     case(1)
     case(6)
+    println(describe("obj"))
+    println(describe(2.0))
+    println(describe(4545654654654))
+    println(describe(5))
 }
 
 fun maxOf(a: Int, b: Int): Int {
@@ -26,3 +30,12 @@ fun case(x: Int) {
         }
     }
 }
+
+fun describe(obj: Any): String = 
+    when (obj) {
+        is Int -> "Is integer"
+        is Double -> "Is double"
+        is Long -> "Is looooong"
+        !is String -> "Is not a string"
+        else -> "Unknown"
+    }
