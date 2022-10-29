@@ -1,6 +1,8 @@
 package conditions
 
 fun main() {
+    val list = listOf("a", "B", "c")
+
     println(maxOf(5, 2))
     println(minOf(5, 2))
     case(1)
@@ -9,6 +11,13 @@ fun main() {
     println(describe(2.0))
     println(describe(4545654654654))
     println(describe(5))
+    in_range(5, 10)
+    in_range(-10, 10)
+
+    if (-1 !in 0..list.lastIndex) {
+        println("-1 is outside of range 0 to ${list.lastIndex}")
+    }
+
 }
 
 fun maxOf(a: Int, b: Int): Int {
@@ -28,6 +37,14 @@ fun case(x: Int) {
         else -> {
             println("x is neither 1 nor 5")
         }
+    }
+}
+
+fun in_range(x: Int, upper_lim: Int) {
+    if (x in 1..upper_lim+1) {
+        println("Indeed in range")
+    } else {
+        println("Unfortunately not in range")
     }
 }
 
