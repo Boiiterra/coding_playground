@@ -1,5 +1,7 @@
 package guess_num
 
+import kotlin.system.exitProcess
+
 
 fun randInt(): Int = (1..100).random()
 
@@ -14,6 +16,7 @@ fun main() {
             var guess = readln().toIntOrNull()
             if (guess is Int) {
                 when {
+                    guess == 0 -> exitProcess(0)
                     guess > num -> println("Your guess is to big")
                     guess < num -> println("Your guess is to small")
                     guess == num -> {
