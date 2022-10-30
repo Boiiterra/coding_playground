@@ -18,4 +18,22 @@ fun main() {
         index++
     }
 
+    // Iterate over range
+    for (i in 1..10) {
+        print("$i, ")
+    }
+    println("11.")
+
+    // Iterate over progression
+    for (i in 1..10 step 2) {
+        print("$i ")
+    }
+    println()
+
+    // Iterate over progression
+    for (i in 9 downTo 0 step 3) {
+        print("$i ")
+    }
+    println()
+
 }
