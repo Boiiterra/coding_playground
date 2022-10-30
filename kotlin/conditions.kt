@@ -11,8 +11,8 @@ fun main() {
     println(describe(2.0))
     println(describe(4545654654654))
     println(describe(5))
-    in_range(5, 10)
-    in_range(-10, 10)
+    in_range(5)
+    in_range(-10, 5)
 
     if (-1 !in 0..list.lastIndex) {
         println("-1 is outside of range 0 to ${list.lastIndex}")
@@ -40,8 +40,8 @@ fun case(x: Int) {
     }
 }
 
-fun in_range(x: Int, upper_lim: Int) {
-    if (x in 1..upper_lim+1) {
+fun in_range(x: Int, upper_lim: Int = 10) {
+    if (x in 1..upper_lim) {
         println("Indeed in range")
     } else {
         println("Unfortunately not in range")
