@@ -30,6 +30,10 @@ fun main() {
     }
     println()
 
+    for (i in 0 until 10)
+        print("$i, ")
+    println("end")
+
     // Iterate over progression
     for (i in 9 downTo 0 step 3) {
         print("$i ")
