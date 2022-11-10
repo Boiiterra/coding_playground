@@ -1,6 +1,6 @@
 package nullable
 
-fun parseInt(arg: String): Int? { // <Type>? <-- type is nullable 
+fun parseInt(arg: String): Int? { // <T>? <-- type is nullable 
     return arg.toIntOrNull()
 }
 
