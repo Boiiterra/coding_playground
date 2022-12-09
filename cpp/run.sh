@@ -4,8 +4,9 @@ if [ -f ./cpp/$1.cpp ]; then
     cd ./cpp 
     echo "Starting $1.cpp script"
     echo
-    g++ $1.cpp
-    ./a.out
+    g++ -o $1 $1.cpp
+    ./$1
+    rm ./$1
     echo
     echo "$1.cpp script stopped"
 else
