@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// My little game
 int main() {
     srand(time(NULL));
     cout << "Guess the number game is started." << endl;
