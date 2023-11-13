@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+if [ -z "$1" ]; then
+    echo "- [ERROR]: No file provided"
+else
+    if [ -f "$1.asm" ]; then
+        echo "- [INFO]: Creating executable $1 from $1.ams file."
+        nasm -f elf64 "$1.asm" -o "$1_tolink"
+        ld "$1_tolink" -o "$1"
+        rm "$1_tolink"
+        echo "- [INFO]: Running executable."
+        echo
+        ./"$1"
+    else
+        echo "- [ERROR]: No such file $1.asm"
+    fi
+fi
