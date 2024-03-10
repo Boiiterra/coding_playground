@@ -1,0 +1,24 @@
+* {
+    background-color: #241342;
+    color: #AF4FAF;
+    font-size: 1.2em;
+    margin-left: 2.8em;
+}
+
+button {
+    border: 1px solid #000;
+    background-color: #342352;
+    transition-duration: 0.4s;
+    margin-left: 3.06em;
+    border-radius: 10px;
+}
+
+p {
+    margin-left: 4em;
+}
+
+button:hover {
+    background-color: #543362;
+    color: #F417FF;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
